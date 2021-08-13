@@ -40,6 +40,8 @@ const PARAM_NAME = 'subid1';
 const TARGET_NAME = 'sub_id_1';
 const ELEMENT_SELECTOR = '#target-link';
 
+// Прослушиватель события загрузки страницы
+// Внимание! Перезапишет если их два на одной странице
 window.onload = () => {
   // Получаем ссылку на ссылку
   const link = document.querySelector(ELEMENT_SELECTOR);
