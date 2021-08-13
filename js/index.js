@@ -40,9 +40,11 @@ const PARAM_NAME = 'subid1';
 const TARGET_NAME = 'sub_id_1';
 const ELEMENT_SELECTOR = '#target-link';
 
-// Получаем ссылку на ссылку
-const link = document.querySelector(ELEMENT_SELECTOR);
-// При помощи служебной функции парсим нужный параметр страницы
-const value = getValueFromQueryString(PARAM_NAME);
-// Заменяем элементу ссылка атрибут href
-link.href = `${SITE}/?${TARGET_NAME}=${value}`;
+window.onload = () => {
+  // Получаем ссылку на ссылку
+  const link = document.querySelector(ELEMENT_SELECTOR);
+  // При помощи служебной функции парсим нужный параметр страницы
+  const value = getValueFromQueryString(PARAM_NAME);
+  // Заменяем элементу ссылка атрибут href
+  link.href = `${SITE}/?${TARGET_NAME}=${value}`;
+}
